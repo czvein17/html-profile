@@ -1,0 +1,106 @@
+.skills-section {
+  /* padding-top: 7rem; */
+  /* padding-bottom: 7rem; */
+  background-color: transparent;
+  z-index: 10;
+  position: relative;
+}
+
+.skills-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.skills-container h2 {
+  font-size: 1.968rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.skills-container p {
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+  color: #6b7280;
+}
+
+.skills-list {
+  max-width: 64rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.skillSet-container {
+  position: relative;
+}
+
+.skillSet-container svg {
+  position: absolute;
+  top: -1.25rem;
+  left: -1.25rem;
+  width: 11rem;
+  height: 11rem;
+  opacity: 0.1;
+  color: #333;
+}
+
+/* Skills Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+  /* gap: 1.5rem; */
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+/* Medium screens (tablet) - 4 columns */
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large screens (desktop) - 6 columns */
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.skill-wrapper {
+  padding: 2.2rem;
+  width: 150px;
+  height: 150px;
+}
+
+/* Skill image grayscale effect */
+.skill-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.skill-image:hover {
+  filter: grayscale(0%);
+}
+
+/* Dark mode - no grayscale by default */
+body.dark .skill-image {
+  filter: grayscale(0%);
+}
