@@ -446,6 +446,8 @@ body.dark .scroll-link {
 
   .hero-description {
     font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   /* Mobile floating icon adjustments - keep them visible but smaller */
